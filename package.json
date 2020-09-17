@@ -1,0 +1,14 @@
+{
+    "name": "migrate",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node migrate_users.js"
+    },
+    "dependencies": {
+        "crypto": "^1.0.1",
+        "mongoose": "^5.10.5",
+        "uuid": "^3.3.3"
+    },
+    "devDependencies": {}
+}
