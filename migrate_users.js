@@ -54,15 +54,10 @@ c.then((conn) => {
         await Promise.all(newUsers);
 
         const backupCollectionName = `users_${uuidv1()}`;
-        // const backupOldUsers =
         await conn.collection('users').rename(backupCollectionName, { dropTarget: true });
-        // await Promise.all (backupOldUsers);
+		console.log(`Users collection backed up to ${backupCollectionName}`);
 
-        // const activateNewUsers =
         await conn.collection('usersv2').rename('users', { dropTarget: true });
-        // await Promise.all(activateNewUsers);
-
-        console.log(`Users collection backed up to ${backupCollectionName}`);
     }
 
     migrate();
